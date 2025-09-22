@@ -5,6 +5,12 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
 /* HEADER */
 
 .header-container {
@@ -67,17 +73,36 @@
 
 .main-container {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.nav-container {
+  width: 400px; /* Largura fixa para a barra lateral */
+  flex-shrink: 0; /* Impede que a barra lateral encolha se a tela ficar pequena */
+  background-color: orange;
+}
+
+.main-content > iframe {
+  width: 100%; 
+  aspect-ratio: 16 / 9;
+  border: none;
 }
 
 .section-container {
   display: flex;
-  flex-direction: row;  
-  margin-right: 80px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
 }
 
-.section-container #logo-chanel{
+.section-container #logo-chanel {
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -87,6 +112,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  line-height: .5;
+  line-height: 0.5;
 }
+
 
